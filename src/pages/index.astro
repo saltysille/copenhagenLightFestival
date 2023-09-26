@@ -1,6 +1,7 @@
 ---
-import Nav from "../components/Nav.astro";
-import Footer from "../components/Footer.astro"
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/main.css"
+import "../styles/normalize.css"
 ---
 
 <!DOCTYPE html>
@@ -11,18 +12,11 @@ import Footer from "../components/Footer.astro"
     <title>Document</title>
 </head>
 <body>
+	
+	<MainLayout title="Forside">
 
-	<header>
-		<Nav/>
-	</header>
 
-	<main>
-
-	</main>
-
-	<footer>
-		
-	</footer>
+	</MainLayout>
     
 </body>
 </html>
