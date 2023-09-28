@@ -1,0 +1,84 @@
+---
+---
+
+<div class="wrapper">
+    <div class="box-1">
+        <img class="video-frontpage" src="/slider.png" alt="slider">
+    </div>
+
+    <div class="box-2">
+      <h1 class="h1_norrebro">Copenhagen Light Fesival
+        <br/> Februar 2024</h1>
+    </div>
+
+  </div>
+
+  <style>
+
+h1{
+    color: #ffffff;
+      font-family: Helvetica;
+      font-weight: 400;
+      line-height: 1.25;
+      text-transform: uppercase;
+      font-size: 24px;
+     
+      
+}
+
+    /* Grids */
+
+.wrapper {
+  display: grid;
+  
+}
+
+.box-1 {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 9;
+  z-index: -1;
+}
+
+.box-2 {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row-start: 6;
+    grid-row-end: 9;
+    z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .box-2 {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row-start: 3;
+    grid-row-end: 8;
+    z-index: 1;
+  }
+
+  h1{
+    font-size: 65px;
+    
+      margin-top: 0;
+      margin-bottom: 0;
+  }
+
+}
+
+/* Img */
+
+.video-frontpage {
+  width: 100%;
+  display: block;
+}
+  </style>
