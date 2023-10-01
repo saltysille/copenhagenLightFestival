@@ -1,0 +1,133 @@
+---
+
+---
+
+<h1>
+  Værker
+</h1>
+    <div class="slider-container">
+        <div class="slider">
+            <img src="/InsekternesBlik.webp" alt="Image 1">
+            <img src="/Echo.webp" alt="Image 2">
+            <img src="/Arachne.webp" alt="Image 3">
+        </div>
+        <button class="prev-btn">
+          <img src="/ArrowPrevious.svg" alt="Arrow previos">
+        </button>
+        <button class="next-btn">
+          <img src="/ArrowNext.svg" alt="Arrow next">
+        </button>
+    </div>
+
+
+<style>
+
+h1{
+    color: #ffffff;
+      font-family: Helvetica;
+      font-weight: 400;
+      line-height: 1.25;
+      text-transform: uppercase;
+      font-size: 50px;
+      margin-left: 2rem;
+      margin-top: 5rem;
+     
+      
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1700px; /* Adjust the width as needed */
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+}
+
+button.prev-btn,
+button.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+button.prev-btn {
+    left: 3%;
+    top: 80%;
+}
+
+button.next-btn {
+    right: 3%;
+    top: 80%;
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 100px; /* Adjust the button width as needed */
+    height: 100px; /* Adjust the button height as needed */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.prev-btn img,
+.next-btn img {
+    width: 100%;
+    height: 100%;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    opacity: 0.8; /* Adjust the hover opacity as desired */
+}
+
+
+</style>
+
+<script>
+ 
+const slider = document.querySelector('.slider');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+let currentIndex = 0;
+
+function slideTo(index) {
+    const slideWidth = slider.clientWidth;
+    const offset = -index * slideWidth;
+    slider.style.transform = `translateX(${offset}px)`;
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + slider.childElementCount) % slider.childElementCount;
+    slideTo(currentIndex);
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % slider.childElementCount;
+    slideTo(currentIndex);
+}
+
+prevBtn.addEventListener('click', prevSlide);
+nextBtn.addEventListener('click', nextSlide);
+
+
+</script>
