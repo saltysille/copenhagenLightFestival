@@ -5,7 +5,7 @@
     Social Media Award
   </h1>
 
-  <a href="#">
+  <a class="deltag" href="#">
   <img src="/deltag.svg" alt="deltage her"> 
 </a>
 
@@ -35,7 +35,7 @@ h1{
       font-weight: 400;
       line-height: 1.25;
       text-transform: uppercase;
-      font-size: 50px;
+      font-size: 30px;
       margin-left: 2rem;
       margin-top: 0;
     
@@ -62,7 +62,7 @@ a{
     position: relative;
     width: 100%; /* Adjust the initial image width as needed */
     transition: transform 0.3s ease;
-    margin-bottom: 15rem;
+    margin-bottom: 5rem;
     margin-top: 1rem;
 }
 
@@ -72,11 +72,42 @@ a{
 
 
 a img{
-    width: 60%;
+    width: 85%;
     display: block;
     object-fit: cover;
     margin: 0 auto;
     margin-top: 1rem;
     
+}
+.deltag{
+    width: 50%;
+    display: block;
+    object-fit: cover;
+    margin-left: 1rem;
+    
+    
+}
+
+@media screen and (min-width: 768px) {
+    a img{
+    width: 60%;
+    }
+
+    h1{
+        font-size: 50px;  
+    }
+
+    .deltag{
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-left: 0;
+
+}
+
+.image-container{
+    margin-bottom: 15rem; 
+}
+
 }
  </style>

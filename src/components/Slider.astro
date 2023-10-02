@@ -21,9 +21,10 @@ h1{
       font-weight: 400;
       line-height: 1.25;
       text-transform: uppercase;
-      font-size: 50px;
+      font-size: 22px;
       margin-left: 2rem;
-      margin-top: 5rem;
+      background-color: #000000B3;
+     
      
       
 }
@@ -32,7 +33,6 @@ h1{
 
 .wrapper {
   display: grid;
-  
 }
 
 .box-1 {
@@ -42,14 +42,15 @@ h1{
   grid-row-start: 1;
   grid-row-end: 9;
   z-index: -1;
+  
 }
 
 .box-2 {
     display: grid;
-    grid-column-start: 2;
+    grid-column-start: 1;
     grid-column-end: 8;
-    grid-row-start: 6;
-    grid-row-end: 9;
+    grid-row-start: 8;
+    grid-row-end: 8;
     z-index: 1;
 }
 
@@ -57,6 +58,7 @@ h1{
   .wrapper {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
+    width: 100%;
   }
 
   .box-2 {
@@ -70,17 +72,22 @@ h1{
 
   h1{
     font-size: 65px;
-    
+     margin-top: 5rem;
       margin-top: 0;
       margin-bottom: 0;
   }
+
+ .video-frontpage {
+  width: 100%;
+}
 
 }
 
 /* Img */
 
 .video-frontpage {
-  width: 100%;
+  max-width: 100vw;
   display: block;
+  object-fit: cover;
 }
   </style>
