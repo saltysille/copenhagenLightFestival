@@ -29,14 +29,15 @@ console.log(myData )
 
   <article>
     
+    <h1>{myData.title}</h1>
+
     <div class="div_image">
         <img class="image" src={myData.img} alt="Billede af værk">
     </div >
     <div class="text">
-        <h2>{myData.title}</h2>
         <p><strong>WHO</strong> {myData.who}</p>
         <p><strong>WHERE:</strong> {myData.where}</p>
-        <p>{myData.despric}</p>
+        <p>{myData.description}</p>
         <a href={`vaerker/${myData.slug}`}>
             <img class="arrow" src="/ArrowNext.svg" alt="Knap til beskrivelse af værk">
     </a>
@@ -44,6 +45,44 @@ console.log(myData )
 
 </article>
 
-
-
 </MainLayout>
+
+<style>
+   h1, h2{
+    color: #ffffff;
+      font-family: Helvetica;
+      font-weight: 400;
+      text-transform: uppercase;
+      
+}
+
+ h1{
+    font-size: 30px;
+    margin-left: 2rem;
+      margin-top: 10rem;
+      margin-bottom: 1rem;
+      line-height: 1.25;
+}
+
+h2{
+    font-size: 20px;
+    margin-top: 3rem;
+    text-decoration: underline;
+    
+}
+
+ p{
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Helvetica;
+      font-weight: 400;
+      margin-left: 0;
+}
+
+image{
+  object-fit: cover;
+  width: 80%;
+  margin: 0 auto;
+  
+}
+</style>
