@@ -1,0 +1,49 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+ export async function getStaticPaths() {
+  const data = await fetch("https://zjnxsqqsmngkuukudtjx.supabase.co/rest/v1/copenhagenLightFestival",
+  {
+	method: "GET",
+	headers:{
+		apikey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpqbnhzcXFzbW5na3V1a3VkdGp4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTU4OTA0MjgsImV4cCI6MjAxMTQ2NjQyOH0.rXSQvsHgfJeRYcdBgI1y6UDJ_ZypGEgDKuU_cxn36Ps"
+	}
+}
+  ).then(response => response.json());
+
+  return data.map((vaerk) => {
+    return {
+      params: { slug: vaerk.slug },
+      props: { myData:vaerk},
+    };
+  });
+} 
+
+const {myData} = Astro.props;
+console.log(myData )
+
+
+---
+
+<MainLayout title={myData.title}>
+
+  <article>
+    
+    <div class="div_image">
+        <img class="image" src={myData.img} alt="Billede af værk">
+    </div >
+    <div class="text">
+        <h2>{myData.title}</h2>
+        <p><strong>WHO</strong> {myData.who}</p>
+        <p><strong>WHERE:</strong> {myData.where}</p>
+        <p>{myData.despric}</p>
+        <a href={`vaerker/${myData.slug}`}>
+            <img class="arrow" src="/ArrowNext.svg" alt="Knap til beskrivelse af værk">
+    </a>
+    </div>
+
+</article>
+
+
+
+</MainLayout>
