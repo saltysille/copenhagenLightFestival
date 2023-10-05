@@ -14,13 +14,47 @@ console.log(data)
         <h2>{data.title}</h2>
         <p><strong>WHO</strong> {data.who}</p>
         <p><strong>WHERE:</strong> {data.where}</p>
-        <a href="#">
+        <a href={`vaerker/${data.slug}`}>
             <img class="arrow" src="/ArrowNext.svg" alt="Knap til beskrivelse af værk">
     </a>
     </div>
 
 </article>
 
+<!-- 
+<div class="grid-2">
+
+    <div class="text">
+    <h2>Insekternes Blik</h2>
+    <p><strong>WHO</strong> Anna Rosa Hiort-Lorenzen (DK)</p>
+    <p><strong>WHERE:</strong> Vestre Kirkegård, <br/> entrance from Sjælør Boulevard</p>
+    </div>
+    <div class="flex-container">
+    <img class="arrow" src="/ArrowNext.svg" alt="Knap til beskrivelse af værk">
+    </div>
+    <div class="flex">
+        <img class="image" src="/Arachne.webp" alt="Arachne">
+    </div >   
+</div>
+
+
+
+</div>
+
+<div class="grid-container">
+    <div>
+    <img class="image" src="/Echo.webp" alt="Echo">
+</div >
+    <div>
+    <h2>Insekternes Blik</h2>
+    <p><strong>WHO</strong> Anna Rosa Hiort-Lorenzen (DK)</p>
+    <p><strong>WHERE:</strong> Vestre Kirkegård, <br/> entrance from Sjælør Boulevard</p>
+    <div class="flex-container">
+    <img class="arrow" src="/ArrowNext.svg" alt="Knap til beskrivelse af værk">
+    </div>
+</div>
+</div>
+ -->
 <style>
 article {
     display:grid;
