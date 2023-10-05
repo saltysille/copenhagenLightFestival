@@ -1,4 +1,6 @@
 ---
+const {data} = Astro.props;
+console.log(data)
 ---
 
 <h1>Værker</h1>
@@ -8,9 +10,9 @@
     <img class="image" src="/InsekternesBlik.webp" alt="Insekternes Blik">
 </div >
     <div class="text">
-    <h2>Insekternes Blik</h2>
-    <p><strong>WHO</strong> Anna Rosa Hiort-Lorenzen (DK)</p>
-    <p><strong>WHERE:</strong> Vestre Kirkegård, <br/> entrance from Sjælør Boulevard</p>
+    <h2>{data.title}</h2>
+    <p><strong>WHO</strong> {data.who}</p>
+    <p><strong>WHERE:</strong> {data.where}</p>
     <div class="flex-container">
     <img class="arrow" src="/ArrowNext.svg" alt="Knap til beskrivelse af værk">
     </div>
