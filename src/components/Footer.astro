@@ -1,6 +1,6 @@
 <footer id="footer">
 
-    <div>
+    <div class="p-stor">
     <p><a href="#">FOR KUNSTNERE</a></p>
     <p><a href="#">STØT COPENHAGEN LIGHT FESTIVAL</a></p>
     <p><a href="#">NYHEDSBREV</a></p>
@@ -37,7 +37,8 @@
 
 .logo{
     display: block;
-    width: 50%;
+    width: 30%;
+    margin-top: 25px;
 }
 .wrapper {
   display: grid;
@@ -56,12 +57,16 @@
       padding: 1rem;
       
       z-index: -1;
+
+    }
+    .p-stor{
+      font-size: 20px;
     }
 
     p{
         z-index: 1;
         color: #FFF;
-        font-size: 15px;
+        font-size: 20px;
         text-transform: uppercase;
         font-family: Helvetica;
    
@@ -69,16 +74,14 @@
 }
 
 .flexbox{
-    display: flex;
-    justify-content: end;
-    flex-direction: column;
+  margin-top: 30px;
+ 
 }
 .p_left{
     z-index: 1;
         font-size: 15px;
         text-transform: uppercase;
         font-family: Helvetica;
-        text-align: end;
         margin-bottom: 0;
         
    
@@ -114,15 +117,24 @@ p a:hover{
     height: 100vh;
     padding: 90px 46px 87px 57px;
   }
+
       .wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin-top: 0px;
   }
+  .flexbox{
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    margin-top: -100px;
+}
 
   .logo{
     display: block;
-    height: 192px;
-    width: 384px;
+    height: 150px;
+    width: 300px;
+    margin: 0;
 }
 
 p{
@@ -130,8 +142,12 @@ p{
 }
 
 .p_left{
-        font-size: 30px;
-       
+        font-size: 25px;
+    z-index: 1;
+        text-transform: uppercase;
+        font-family: Helvetica;
+        text-align: end;
+        margin-bottom: 0;
 }
 
   .box-1{
