@@ -1,0 +1,27 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/main.css"
+import "../styles/normalize.css"
+import Liste from "../components/Liste.astro";
+
+const data = await fetch("https://zjnxsqqsmngkuukudtjx.supabase.co/",{
+	method: "GET",
+	headers:{
+		apikey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpqbnhzcXFzbW5na3V1a3VkdGp4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTU4OTA0MjgsImV4cCI6MjAxMTQ2NjQyOH0.rXSQvsHgfJeRYcdBgI1y6UDJ_ZypGEgDKuU_cxn36Ps"
+	}
+}).then(res=>res.json());
+
+console.log(data);
+import { Debug } from 'astro:components';
+---
+
+<!-- Example: Outputs {answer: 6} to the browser -->
+
+<Debug {data} />
+
+
+	<MainLayout title="Værker">
+		
+	<Liste/>
+
+	</MainLayout>
