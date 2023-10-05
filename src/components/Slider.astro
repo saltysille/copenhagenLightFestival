@@ -1,7 +1,23 @@
 ---
 ---
 
-<div class="wrapper">
+<div class="slideshow-container">
+  <div class="slide fade">
+      <img src="/BlueEarth.webp" alt="Slide 1">
+  </div>
+  <div class="slide fade">
+      <img src="/InsekternesBlik.webp" alt="Slide 2">
+  </div>
+  <div class="slide fade">
+      <img src="/Arachne.webp" alt="Slide 3">
+  </div>
+  <div class="slide fade">
+      <img src="/Echo.webp" alt="Slide 11">
+  </div>
+ 
+</div>
+
+<!-- <div class="wrapper">
     <div class="box-1">
         <img class="video-frontpage" src="/slider.webp" alt="slider">
     </div>
@@ -13,7 +29,9 @@
 
   </div>
 
-  <style>
+  -->
+
+  <style> 
 
 h1{
     color: #ffffff;
@@ -23,14 +41,53 @@ h1{
       text-transform: uppercase;
       font-size: 22px;
       margin-left: 2rem;
-      background-color: #000000B3;
+      /* background-color: #000000B3; */
      
      
       
 }
 
-    /* Grids */
+/* slideshow */
+.slideshow-container {
+  max-width: 1000px;
+  margin-top: 20rem;
+  margin-top: 5rem;
+  position: relative;
+  padding-top: 30px;
+}
+.slide img {
+  width: 100vw;
+  height: auto;
+}
+@media screen and (min-width: 800px) {
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    padding-top: 30px;
+  }
 
+  .slide {
+    display: none;
+  }
+
+
+  .fade {
+    animation-name: fade;
+    animation-duration: 1s;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0.9;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+ /* Grids */
+/* 
 .wrapper {
   display: grid;
 }
@@ -84,10 +141,30 @@ h1{
 }
 
 /* Img */
-
+/* 
 .video-frontpage {
   max-width: 100vw;
   display: block;
   object-fit: cover;
-}
+} */
   </style>
+
+
+<script>
+  let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  const slides = document.getElementsByClassName("slide");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 1000); // Change slide every 3 seconds
+}
+
+</script>

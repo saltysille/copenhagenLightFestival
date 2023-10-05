@@ -4,10 +4,10 @@
 <h1>Værker</h1>
 
 <div class="grid-container">
-    <div>
+    <div >
     <img class="image" src="/InsekternesBlik.webp" alt="Insekternes Blik">
 </div >
-    <div>
+    <div class="text">
     <h2>Insekternes Blik</h2>
     <p><strong>WHO</strong> Anna Rosa Hiort-Lorenzen (DK)</p>
     <p><strong>WHERE:</strong> Vestre Kirkegård, <br/> entrance from Sjælør Boulevard</p>
@@ -23,14 +23,16 @@
     <h2>Insekternes Blik</h2>
     <p><strong>WHO</strong> Anna Rosa Hiort-Lorenzen (DK)</p>
     <p><strong>WHERE:</strong> Vestre Kirkegård, <br/> entrance from Sjælør Boulevard</p>
+    </div>
     <div class="flex-container">
     <img class="arrow" src="/ArrowNext.svg" alt="Knap til beskrivelse af værk">
     </div>
+    <div class="flex">
+        <img class="image" src="/Arachne.webp" alt="Arachne">
+    </div >   
 </div>
 
-<div>
-    <img class="image" src="/Arachne.webp" alt="Arachne">
-</div >
+
 
 </div>
 
@@ -58,7 +60,7 @@
 }
 
 h1{
-    font-size: 50px;
+    font-size: 30px;
     margin-left: 2rem;
       margin-top: 10rem;
       margin-bottom: 1rem;
@@ -66,15 +68,15 @@ h1{
 }
 
 h2{
-    font-size: 34px;
-    margin-top: 13rem;
+    font-size: 20px;
+    margin-top: 3rem;
     text-decoration: underline;
-    margin-left: 0;
+    m
 }
 
 p{
     color: #ffffff;
-    font-size: 25px;
+    font-size: 16px;
     font-family: Helvetica;
       font-weight: 400;
       margin-left: 0;
@@ -82,19 +84,13 @@ p{
 
 .grid-container {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* 2 grid spaces for the image, 1 grid space for text */
-    grid-gap: 5rem; /* Adjust the gap as needed */
-    padding: 20px;
-    margin-bottom: 10rem;
+    
 }
 
-.grid-2{
-    display: grid;
-    grid-template-columns: 1fr 2fr; /* 1 grid space for text, 2 grid spaces for the image */
-    grid-gap: 5rem; /* Adjust the gap as needed */
-    padding: 20px;
-    margin-bottom: 10rem;
-
+.grid-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align both elements vertically on small screens */
 }
 
 .flex-container{
@@ -106,12 +102,18 @@ p{
 
 }
 
+.flex{
+    display: flex;
+ order: 1;
+}
+
+
 /* Images */
 
 .image {
-    grid-column: span 2; /* This makes the image span 2 columns */
+    margin: 0 auto;
     object-fit: cover;
-    display: block;
+    display: flex;
     width: 100%;
 }
 
@@ -122,6 +124,55 @@ p{
 
 .text{
     margin-left: 2rem;
+    order: 2;
 }
+
+
+@media screen and (min-width: 768px) {
+
+    h1{
+    font-size: 50px;
+}
+
+h2{
+    font-size: 14px;
+    margin-left: 0;
+    margin-top: 13rem;
+}
+    .grid-container {
+        display: grid;
+    grid-template-columns: 2fr 1fr; /* 2 grid spaces for the image, 1 grid space for text */
+    grid-gap: 5rem; /* Adjust the gap as needed */
+    padding: 20px;
+    margin-bottom: 10rem;
+    }
+
+    .grid-2{
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* 1 grid space for text, 2 grid spaces for the image */
+    grid-gap: 5rem; /* Adjust the gap as needed */
+    padding: 20px;
+    margin-bottom: 10rem;
+    }
+
+ .text{
+    order 1;
+ }
+
+.image {
+    grid-column: span 2; 
+    display: block;
+}
+
+p{
+    font-size: 25px;
+}
+.flex{
+ order: 2;
+ display: block;
+}
+}
+
+
 
 </style>
