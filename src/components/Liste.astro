@@ -1,22 +1,25 @@
 ---
+const {data} = Astro.props;
+console.log(data)
 ---
 
-<h1>Værker</h1>
 
-<div class="grid-container">
-    <div >
-    <img class="image" src="/InsekternesBlik.webp" alt="Insekternes Blik">
-</div >
+
+<article>
+    <div class="div_image">
+        <img class="image" src="/InsekternesBlik.webp" alt="Insekternes Blik">
+    </div >
     <div class="text">
-    <h2>Insekternes Blik</h2>
-    <p><strong>WHO</strong> Anna Rosa Hiort-Lorenzen (DK)</p>
-    <p><strong>WHERE:</strong> Vestre Kirkegård, <br/> entrance from Sjælør Boulevard</p>
-    <div class="flex-container">
-    <img class="arrow" src="/ArrowNext.svg" alt="Knap til beskrivelse af værk">
+        <h2>{data.title}</h2>
+        <p><strong>WHO</strong> {data.who}</p>
+        <p><strong>WHERE:</strong> {data.where}</p>
+        <div class="flex-container">
+            <img class="arrow" src="/ArrowNext.svg" alt="Knap til beskrivelse af værk">
+        </div>
     </div>
-</div>
-</div>
+</article>
 
+<!-- 
 <div class="grid-2">
 
     <div class="text">
@@ -49,9 +52,19 @@
     </div>
 </div>
 </div>
-
+ -->
 <style>
-    h1, h2{
+article {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+article .div_image {
+    grid-column: span 2;
+}
+article:nth-child(odd) .div_image{
+    order: 10;
+}
+h1, h2{
     color: #ffffff;
       font-family: Helvetica;
       font-weight: 400;
@@ -71,7 +84,7 @@ h2{
     font-size: 20px;
     margin-top: 3rem;
     text-decoration: underline;
-    m
+    
 }
 
 p{
@@ -81,7 +94,7 @@ p{
       font-weight: 400;
       margin-left: 0;
 }
-
+/* 
 .grid-container {
     display: grid;
     
@@ -90,7 +103,7 @@ p{
 .grid-2 {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center align both elements vertically on small screens */
+    align-items: center; 
 }
 
 .flex-container{
@@ -105,12 +118,12 @@ p{
 .flex{
     display: flex;
  order: 1;
-}
+} */
 
 
 /* Images */
 
-.image {
+/* .image {
     margin: 0 auto;
     object-fit: cover;
     display: flex;
@@ -141,16 +154,16 @@ h2{
 }
     .grid-container {
         display: grid;
-    grid-template-columns: 2fr 1fr; /* 2 grid spaces for the image, 1 grid space for text */
-    grid-gap: 5rem; /* Adjust the gap as needed */
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 5rem; 
     padding: 20px;
     margin-bottom: 10rem;
     }
 
     .grid-2{
     display: grid;
-    grid-template-columns: 1fr 2fr; /* 1 grid space for text, 2 grid spaces for the image */
-    grid-gap: 5rem; /* Adjust the gap as needed */
+    grid-template-columns: 1fr 2fr; 
+    grid-gap: 5rem; 
     padding: 20px;
     margin-bottom: 10rem;
     }
@@ -174,5 +187,5 @@ p{
 }
 
 
-
+ */
 </style>

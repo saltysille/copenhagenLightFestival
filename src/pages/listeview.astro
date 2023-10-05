@@ -11,20 +11,23 @@ const data = await fetch("https://zjnxsqqsmngkuukudtjx.supabase.co/rest/v1/copen
 	}
 }).then(res=>res.json());
 
-console.log(data);
-
 ---
 
 
-
-
 	<MainLayout title="Værker">
-		
-		<Liste/>
+
+<section>
+	{
+		data.map((show)=>{
+			return <Liste data={show}/>;
+		})
+	}
+	
+  
+</section>	
 
 	</MainLayout>
 
-
-	<script>
-		
-	</script>
+<style>
+	
+</style>
