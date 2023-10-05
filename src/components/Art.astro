@@ -2,9 +2,12 @@
 
 ---
 
-<h1>
-  Værker
-</h1>
+<div class="grid1-1-events">
+    <h1>
+        Værker
+      </h1>
+    <a href="listeview.html">alle værker</a>
+    </div>
     <div class="slider-container">
         <div class="slider">
             <img src="/InsekternesBlik1.webp" alt="Image 1">
@@ -30,7 +33,11 @@
   
 
 <style>
-
+    .grid1-1-events{
+            display: flex;
+  justify-content: space-between;
+  align-items: center;
+        }
 h1{
     color: #FFFEFE;
       font-family: Helvetica;
@@ -44,7 +51,20 @@ h1{
      
       
 }
-
+a{
+            color: #FFFEFE;
+              font-family: Helvetica;
+              font-weight: 200;
+              line-height: 1.25;
+              text-transform: uppercase;
+              text-decoration: underline;
+              font-size: 25px;
+              margin-top: 10rem;
+              margin-bottom: 1rem;
+              margin-right: 2rem;
+             
+              
+        }
 .slider-container {
     position: relative;
     width: 100%;
@@ -56,7 +76,7 @@ h1{
 
 @media screen and (min-width: 768px) {
     .slider-container {
-        margin-left: 2rem;
+        margin-left: 4rem;
     margin-right: 2rem;
     margin-top: 0;
     margin-bottom: 10rem;
@@ -78,20 +98,27 @@ h1{
 .slider img {
     width: 100%;
     height: auto;
-    padding-left: 150px;
+padding-left: 20px;
 }
 }
 
 .slider img {
     width: 100%;
     height: auto;
-    padding-left: 30px;
+
 }
 .slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
+  
 }
-
+.slider-container {
+        margin-left: 3rem;
+    margin-right: 2rem;
+    margin-top: 0;
+    margin-bottom: 10rem;
+    padding-left: 150px;
+}
 
 
 button.prev-btn,
