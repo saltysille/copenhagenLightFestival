@@ -35,11 +35,7 @@
   
 
 <style>
-    .grid1-1-events{
-            display: flex;
-  justify-content: space-between;
-  align-items: center;
-        }
+
 h1{
     color: #FFFEFE;
       font-family: Helvetica;
@@ -60,29 +56,85 @@ a{
               line-height: 1.25;
               text-transform: uppercase;
               text-decoration: underline;
-              font-size: 25px;
+              font-size: 20px;
               margin-top: 10rem;
               margin-bottom: 1rem;
-              margin-right: 2rem;
-             
+              margin-left: 2rem;
+              margin-right: 0;
+                     letter-spacing: 0.1rem;
+
               
         }
-.slider-container {
-    position: relative;
-    width: 100%;
-    max-width: 1700px; /* Adjust the width as needed */
-    overflow: hidden;
+        .slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 1700px; /* Adjust the width as needed */
+            overflow: hidden;
+            
+        }
+        
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .slider img {
+            width: 100%;
+            height: auto;
+            padding-left: 20px;
+        }
 
-    
+
+button.prev-btn,
+button.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
 }
 
+button.prev-btn {
+    left: 3%;
+    top: 80%;
+}
+
+button.next-btn {
+    right: 3%;
+    top: 80%;
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 100px; /* Adjust the button width as needed */
+    height: 100px; /* Adjust the button height as needed */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.prev-btn img,
+.next-btn img {
+    width: 50%;
+    height: 50%;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    opacity: 0.8; /* Adjust the hover opacity as desired */
+}
 @media screen and (min-width: 768px) {
     .slider-container {
-        margin-left: 4rem;
+        margin-left: 2rem;
     margin-right: 2rem;
     margin-top: 0;
     margin-bottom: 10rem;
-    
+    max-width: 1700px; /* Adjust the width as needed */
+
     }
 
     .prev-btn img,
@@ -133,74 +185,13 @@ a{
               font-size: 25px;
               margin-top: 5rem;
               margin-bottom: 1rem;
-              margin-right: 2rem;
+           letter-spacing: 0.1rem;
              
               
         }
         a:hover{
             color: #7b7b7b;
         }
-}
-
-.slider img {
-    width: 100%;
-    height: auto;
-
-}
-.slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-.slider-container {
-        margin-left: 3rem;
-    margin-right: 2rem;
-    margin-top: 0;
-    margin-bottom: 10rem;
-    padding-left: 150px;
-}
-
-
-button.prev-btn,
-button.next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-button.prev-btn {
-    left: 3%;
-    top: 80%;
-}
-
-button.next-btn {
-    right: 3%;
-    top: 80%;
-}
-
-.prev-btn,
-.next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    width: 100px; /* Adjust the button width as needed */
-    height: 100px; /* Adjust the button height as needed */
-    transition: opacity 0.3s ease-in-out;
-}
-
-.prev-btn img,
-.next-btn img {
-    width: 50%;
-    height: 50%;
-}
-
-.prev-btn:hover,
-.next-btn:hover {
-    opacity: 0.8; /* Adjust the hover opacity as desired */
 }
 
 
