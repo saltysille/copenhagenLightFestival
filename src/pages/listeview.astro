@@ -18,6 +18,8 @@ const data = await fetch("https://zjnxsqqsmngkuukudtjx.supabase.co/rest/v1/copen
 
 	<MainLayout title="Værker">
 
+		<h1>Værker</h1>
+
 <section>
 	{
 		data.map((show)=>{
@@ -31,5 +33,19 @@ const data = await fetch("https://zjnxsqqsmngkuukudtjx.supabase.co/rest/v1/copen
 	</MainLayout>
 
 <style>
-	
+	 h1, h2{
+    color: #ffffff;
+      font-family: Helvetica;
+      font-weight: 400;
+      text-transform: uppercase;
+      
+}
+
+ h1{
+    font-size: 50px;
+    margin-left: 2rem;
+      margin-top: 10rem;
+      margin-bottom: 1rem;
+      line-height: 1.25;
+}
 </style>
