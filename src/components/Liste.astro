@@ -11,7 +11,9 @@ console.log(data)
         <img class="image" src={data.img} alt="Insekternes Blik">
     </div >
     <div class="text">
+        <a href={`vaerker/${data.slug}`}>
         <h2>{data.title}</h2>
+    </a>
         <p><strong>WHO: </strong> {data.who}</p>
         <p><strong>WHERE: </strong> {data.where}</p>
         <a href={`vaerker/${data.slug}`}>
@@ -24,20 +26,22 @@ console.log(data)
 <style>
 
  h1, h2{
-    color: #ffffff;
-      font-family: Helvetica;
-      font-weight: 400;
-      text-transform: uppercase;
+   
       
 }
 
 
-h2{
+ a h2{
     font-size: 20px;
     margin-top: 3rem;
     text-decoration: none;
     font-weight: 600;
     margin: 1rem;
+    color: #ffffff;
+      font-family: Helvetica;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-decoration: none;
     
 }
 
@@ -46,7 +50,6 @@ h2{
     font-size: 16px;
     font-family: Helvetica;
       font-weight: 400;
-      margin: 1rem;
  }
 
 
@@ -97,7 +100,7 @@ h1{
   font-size: 50px;
 }
  
-h2{
+a h2{
     font-size: 30px;
     margin-left: 0;
     margin-top: 13rem;
