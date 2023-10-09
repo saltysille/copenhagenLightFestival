@@ -55,12 +55,12 @@
         
         button.prev-btn {
             left: 3%;
-            top: 80%;
+            top: 50%;
         }
         
         button.next-btn {
             right: 3%;
-            top: 80%;
+            top: 50%;
         }
         
         .prev-btn,
@@ -87,14 +87,14 @@
         
         h1{
             color: #FFFEFE;
-              font-family: Helvetica;
-              font-weight: 400;
-              line-height: 1.25;
-              text-transform: uppercase;
-              font-size: 30px;
-              margin-left: 2rem;
-              margin-top: 5rem;
-              margin-bottom: 1rem;
+    font-family: Helvetica;
+    font-weight: 400;
+    line-height: 1.25;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-left: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
              
               
         }
@@ -128,7 +128,7 @@
               line-height: 1.25;
               text-transform: uppercase;
               font-size: 30px;
-              margin-left: 2rem;
+              margin-left: 3rem;
               margin-top: 5rem;
               margin-bottom: 1rem;
              
@@ -152,10 +152,12 @@
         color: #7b7b7b;
     }
     .slider-container {
+        
+        margin-left: 2rem;
     margin-right: 2rem;
     margin-top: 0;
-    margin-bottom: 10rem;
-    padding-left: 150px;
+    margin-bottom: 5rem;
+    max-width: 1700px; /* Adjust the width as needed */
    
     }
     .slider img {
@@ -169,8 +171,8 @@ padding-left: 20px;
 
     .prev-btn img,
 .next-btn img {
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
 }
 
 h1{
@@ -183,30 +185,30 @@ h1{
         
         <script>
          
-        const slider = document.querySelector('.slider');
-        const prevBtn = document.querySelector('.prev-btn');
-        const nextBtn = document.querySelector('.next-btn');
+        const slider2 = document.querySelector('.slider');
+        const prevBtn2 = document.querySelector('.prev-btn');
+        const nextBtn2 = document.querySelector('.next-btn');
         
         let currentIndex = 0;
         
         function slideTo(index) {
-            const slideWidth = slider.clientWidth;
-            const offset = -index * slideWidth;
-            slider.style.transform = `translateX(${offset}px)`;
+            const slideWidth2 = slider2.clientWidth;
+            const offset2 = -index * slideWidth2;
+            slider2.style.transform = `translateX(${offset2}px)`;
         }
         
         function prevSlide() {
-            currentIndex = (currentIndex - 1 + slider.childElementCount) % slider.childElementCount;
+            currentIndex = (currentIndex - 1 + slider2.childElementCount) % slider2.childElementCount;
             slideTo(currentIndex);
         }
         
         function nextSlide() {
-            currentIndex = (currentIndex + 1) % slider.childElementCount;
+            currentIndex = (currentIndex + 1) % slider2.childElementCount;
             slideTo(currentIndex);
         }
         
-        prevBtn.addEventListener('click', prevSlide);
-        nextBtn.addEventListener('click', nextSlide);
+        prevBtn2.addEventListener('click', prevSlide);
+        nextBtn2.addEventListener('click', nextSlide);
         
         
         </script>
