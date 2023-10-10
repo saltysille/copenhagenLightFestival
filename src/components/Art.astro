@@ -31,37 +31,7 @@
           <img src="/ArrowNext.svg" alt="Arrow next">
         </button>
     </div>
-    <script>
-        console.log("HEJ FRA JS!")
-        const slider = document.querySelector('.slider');
-        const prevBtn = document.querySelector('.prev-btn');
-        const nextBtn = document.querySelector('.next-btn');
-        
-        let currentIndex = 0;
-        
-        function slideTo(index) {
-            const slideWidth = slider.clientWidth;
-            const offset = -index * slideWidth;
-            slider.style.transform = `translateX(${offset}px)`;
-        }
-        
-        function prevSlide() {
-            console.log("PREV");
-            currentIndex = (currentIndex - 1 + slider.childElementCount) % slider.childElementCount;
-            slideTo(currentIndex);
-        }
-        
-        function nextSlide() {
-            console.log("NEXT");
-            currentIndex = (currentIndex + 1) % slider.childElementCount;
-            slideTo(currentIndex);
-        }
-        
-        prevBtn.addEventListener('click', prevSlide);
-        nextBtn.addEventListener('click', nextSlide);
-        
-        
-        </script>
+   
   
 
 <style>
@@ -230,4 +200,34 @@ a{
 
 </style>
 
-
+<script>
+    console.log("HEJ FRA JS!")
+    const slider = document.querySelector('.slider');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    
+    let currentIndex = 0;
+    
+    function slideTo(index) {
+        const slideWidth = slider.clientWidth;
+        const offset = -index * slideWidth;
+        // slider.style.transform = `translateX(${offset}px)`;
+    }
+    
+    function prevSlide() {
+        console.log("PREV");
+        currentIndex = (currentIndex - 1 + slider.childElementCount) % slider.childElementCount;
+        slideTo(currentIndex);
+    }
+    
+    function nextSlide() {
+        console.log("NEXT");
+        currentIndex = (currentIndex + 1) % slider.childElementCount;
+        slideTo(currentIndex);
+    }
+    
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+    
+    
+    </script>
