@@ -8,7 +8,9 @@ console.log(data)
 <article>
     
     <div class="div_image">
+        <a href={`vaerker/${data.slug}`}>
         <img class="image" src={data.img} alt="Insekternes Blik">
+    </a>
     </div >
     <div class="text">
         <a href={`vaerker/${data.slug}`}>
@@ -25,10 +27,7 @@ console.log(data)
 
 <style>
 
- h1, h2{
-   
-      
-}
+
 
 
  a h2{
@@ -41,7 +40,6 @@ console.log(data)
       font-family: Helvetica;
       font-weight: 400;
       text-transform: uppercase;
-      text-decoration: none;
     
 }
 
@@ -75,8 +73,14 @@ console.log(data)
     order: 2;
 }
 
+a{
+        text-decoration: none;
+    }
+
 
 @media screen and (min-width: 768px) {
+
+   
     article {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -96,22 +100,17 @@ article:nth-child(even) .div_image{
     font-size: 50px;
 }
 
-h1{
-  font-size: 50px;
-}
- 
 a h2{
     font-size: 30px;
     margin-left: 0;
     margin-top: 13rem;
-    text-decoration: none;
     font-weight: 600;
+    
 }
-h2:hover{
+a h2:hover{
     color: #7b7b7b;
 }
  
-
  
 
  .image {
