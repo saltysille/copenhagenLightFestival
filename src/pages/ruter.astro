@@ -11,8 +11,15 @@ import "../styles/normalize.css"
 <h1>Ruter</h1>
 
 <section>
-<img src="/ruter.webp" alt="rute">
-<img src="/mobilrute.webp" alt="mobilrute">
+<img class="desktoprute" src="/ruter.webp" alt="rute">
+<img class="mobilrute" src="/mobilrute.webp" alt="mobilrute">
+
+<div class="div_tilbage" >
+<a class="tilbageknap_link" href="/listeview">
+<img  class="tilbageknap" src="/tilbageknap.svg" alt="tilbage knap">
+</a>
+</div>
+
 </section>	
 
 </MainLayout>
@@ -29,7 +36,50 @@ import "../styles/normalize.css"
 img
 {width: 100%;}
 
+.div_tilbage{
+  margin-left: 2.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
 
+
+.tilbageknap_link{
+
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin: 0;
+
+}
+
+
+
+.tilbageknap{
+     width: 100%;
+     margin: 0;
+     
+}
+
+@media screen and (max-width: 800px) {
+    .desktoprute {
+        display: none;
+    }}
+
+	@media screen and (min-width: 800px) {
+    .mobilrute {
+        display: none;
+    }
+
+	.tilbageknap_link{
+  margin: 5.2rem;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}
+.tilbageknap{
+  width: 45%;
+
+	 img {
+        margin: 20px 20px 20px 20px
+    } }
  h1{
     font-size: 50px;
     margin-left: 2rem;
