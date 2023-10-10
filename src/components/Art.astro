@@ -213,11 +213,13 @@ function slideTo(index) {
 }
 
 function prevSlide() {
+    console.log("PREV");
     currentIndex = (currentIndex - 1 + slider.childElementCount) % slider.childElementCount;
     slideTo(currentIndex);
 }
 
 function nextSlide() {
+    console.log("NEXT");
     currentIndex = (currentIndex + 1) % slider.childElementCount;
     slideTo(currentIndex);
 }
