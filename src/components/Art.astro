@@ -211,7 +211,7 @@ a{
     function slideTo(index) {
         const slideWidth = slider.clientWidth;
         const offset = -index * slideWidth;
-        // slider.style.transform = `translateX(${offset}px)`;
+        slider.style.transform = `translateX(${offset}px)`;
     }
     
     function prevSlide() {
