@@ -1,12 +1,20 @@
-<footer id="footer">
 
-    <div class="p-stor">
+<footer id="footer">
+  <div class="grid-pil">
+  <div class="p-stor">
     <p><a href="#">FOR KUNSTNERE</a></p>
     <p><a href="#">STØT COPENHAGEN LIGHT FESTIVAL</a></p>
     <p><a href="#">NYHEDSBREV</a></p>
     <p> <a href="#">PRESSE</a></p>
-    <p><a href="#">SPONSORE</a></p>
+    <p><a href="#">SPONSORE</a></p> 
+  </div> 
+
+  <div class="pilop">
+    <a href="#op"><img src="/pilfooter.svg" alt="pilop"></a>
+  </div>
+
 </div>
+
 
 <div class="flexbox">
 
@@ -34,8 +42,14 @@
 </footer>
 
 <style>
-
-
+.grid-pil{
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+.pilop{
+  margin-left: 110px;
+  margin-top: 20px;
+}
 .logo{
     display: block;
     width: 30%;
@@ -113,7 +127,9 @@ p a:hover{
 
 
     @media screen and (min-width: 768px) {
-  
+      .pilop{
+margin-left: 600px;
+}
   footer{
     height: 100vh;
     padding: 90px 46px 87px 57px;
